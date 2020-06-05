@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Kyrsovaya
@@ -29,7 +20,6 @@ namespace Kyrsovaya
         {
             if (password.Text == "0000")
             {
-                MessageBox.Show("Вы ввели верный пароль!");
                 this.Hide();
                 inputt inp = new inputt();
                 inp.ShowDialog();

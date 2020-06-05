@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inputt));
             this.OupNameShop = new System.Windows.Forms.TextBox();
             this.OupAddress = new System.Windows.Forms.TextBox();
             this.OupCode = new System.Windows.Forms.TextBox();
@@ -56,6 +57,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -223,7 +226,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(457, 405);
+            this.button3.Location = new System.Drawing.Point(442, 405);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 72);
             this.button3.TabIndex = 17;
@@ -234,7 +237,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлToolStripMenuItem});
+            this.файлToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem,
+            this.удалToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1214, 24);
@@ -286,7 +291,7 @@
             // Search
             // 
             this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Search.Location = new System.Drawing.Point(880, 426);
+            this.Search.Location = new System.Drawing.Point(863, 426);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(175, 29);
             this.Search.TabIndex = 20;
@@ -295,7 +300,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(623, 416);
+            this.label8.Location = new System.Drawing.Point(606, 416);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(251, 48);
             this.label8.TabIndex = 21;
@@ -321,6 +326,20 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(745, 328);
             this.dataGridView1.TabIndex = 23;
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // удалToolStripMenuItem
+            // 
+            this.удалToolStripMenuItem.Name = "удалToolStripMenuItem";
+            this.удалToolStripMenuItem.Size = new System.Drawing.Size(287, 20);
+            this.удалToolStripMenuItem.Text = "Удаление магазина с указанно ценой за единицу";
+            this.удалToolStripMenuItem.Click += new System.EventHandler(this.удалToolStripMenuItem_Click);
             // 
             // inputt
             // 
@@ -351,10 +370,14 @@
             this.Controls.Add(this.OupNameShop);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "inputt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "inputt";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Close);
             this.Load += new System.EventHandler(this.inputt_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -394,5 +417,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалToolStripMenuItem;
     }
 }

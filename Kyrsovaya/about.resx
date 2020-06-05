@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Для начала вам нужно войти в программу, используя пароль. Затем вы перейдете в Меню Управления информационной базой! В данном разделе вы можете создавать, редактировать, удалять и получать все нужные вам сведения. По нажатию на кнопку Выйти в главное меню, Вы выйдите на меню с вводом пароля. По нажатию на кнопку Добавить новые данные, Вы сохраните введенные ваши данные в поля и вывидете их в таблицу. По нажатию на кнопку Удалить мгазин, Вы удалите выделенный вами магазин в таблице. По нажатию на кнопку Найти, Вы найдете нужную вам информацию о товаре который вы ввели в поле рядом с кнопкой.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

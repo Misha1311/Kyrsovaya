@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Linq;
-using System.Data.SqlClient;
 using System.Data;
 
 
@@ -43,7 +42,7 @@ namespace Kyrsovaya
 
         }
 
-        private void outp(data da)
+        private void outp()
         {
             var table = new DataTable("Магазин");
 
@@ -84,7 +83,7 @@ namespace Kyrsovaya
             richTextBox1.Hide();
             inp();
 
-            outp(da);
+            outp();
 
             OupNameShop.Text = "";
             OupAddress.Text = "";
@@ -123,7 +122,7 @@ namespace Kyrsovaya
                 return;
             string path = openFileDialog1.FileName;
             da.Deserialize(File.ReadAllText(path));
-            outp(da);
+            outp();
 
         }
 
@@ -178,9 +177,10 @@ namespace Kyrsovaya
                     if (d.ProductName == d.ProductName)
                     {
                         d.Min = dateb.newData.Min(x => x.Quantity);
+
                         int index = dateb.newData.FindIndex(a => a.Min == d.Min);
           
-                        richTextBox1.Text += $"\nСамый дешёвый товар по адрессу : {dateb.newData.ElementAt(index).Address}";
+                        richTextBox1.Text += $"\nСамый дешёвый товар по адресу : {dateb.newData.ElementAt(index).Address}";
                     }
                 }
             }
@@ -188,8 +188,25 @@ namespace Kyrsovaya
 
         private void inputt_Load(object sender, EventArgs e)
         {
-            outp(da);
+            outp();
             richTextBox1.Hide();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about ab = new about();
+            ab.ShowDialog();
+        }
+
+        private void удалToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Delete del = new Delete();
+            del.ShowDialog();
+        }
+
+        private void Close(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }
